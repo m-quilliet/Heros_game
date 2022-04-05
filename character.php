@@ -26,12 +26,16 @@ class Character{
     public function setRage (int $rage): void{
         $this->_rage= $rage;
     }
-    //méthode magique construct visant à crér un personnage
-    public function __construct($health,$rage){
-        $this->_health= $health;
-        $this->_rage= $rage;
+    //méthode magique construct visant à créer un personnage
+    //qd on créer un new cette methodee est appelées automatiquement
+    public function __construct($health,$rage)//paramétre d'entrée
+    {
+        $this->setHealth($health);
+        $this->setRage($rage);
     }
 }
+// créer un objet qu'on on a hydraté cet objet avec 100 et 0.
+$brutus= new Character (100, 0);
 
 
 
