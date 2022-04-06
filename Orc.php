@@ -11,13 +11,15 @@ class Orc extends Character{
     public function setDamage (int $damage):void{
         $this->_damage= $damage;
     }
-    // appelle cette méthode qd on va créer un nouvel objet new Hero
-    public function __construct(int $health,int $rage,int $damage){
+    // appelle cette méthode qd on va créer un nouvel objet new orc
+    public function __construct(int $health,int $rage){
     //Hero fille de la classe parent Character
     parent::__construct($health,$rage);
-    $this->setDamage($damage);
     }       
     public function __toString(){
-    return 'Je suis un nouvel héro , ma santé est de : ' .$this->getHealth(). ' et mes dommages sont à '.$this->getDamage();
+    return '<br/>Je suis un nouvel Orc , son niveau de santé est de : ' .$this->getHealth(). ' et sa rage est  '.$this->getRage();
+    }
+    public function attack(){
+        return $this-> damage= rand( 600,800);
     }
 }

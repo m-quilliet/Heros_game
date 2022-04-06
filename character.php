@@ -2,7 +2,7 @@
 class Character{
     //def des attributs de l'objet Character
     protected int $_health;
-    protected int  $_rage;
+    protected int $_rage;
 
 
     // getter recuperer la valeur d'un attribut de l'exterieur de la classe // recupere l'attribut rage de la classe en cours
@@ -20,7 +20,7 @@ class Character{
      * @return void
      */
     public function setHealth (int $health): void{
-        $this->_healt= $health;
+        $this->_health= $health;
     }
     // def methode de visibilté public elle a pour paramétre d'entrée $age on affecte $age à l'attribut _age de l'objet en cours $this
     public function setRage (int $rage): void{

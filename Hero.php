@@ -46,6 +46,13 @@ class Hero extends Character{
         $this->setShield($shield);
         $this->setShieldValue($shieldValue);
     }
+    public function attacked($attackValue){
+        $dmg = $attackValue - $this -> getShieldValue();
+        if ($dmg > 0) {
+            $this-> setHealth($this->getHealth() - $dmg);
+            $this->setRage($this->getRage() + 30);
+        }
+    }
     public function __toString(){
         return 'Je suis un nouvel héro , mon arme est un ' .$this->getWeapon(). ' et ma protection est un '.$this->getShield().'.';
     }
