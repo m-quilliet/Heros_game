@@ -34,8 +34,6 @@ class Character{
         $this->setRage($rage);
     }
 }
-// créer un objet qu'on on a hydraté cet objet avec 100 et 0.
-$brutus= new Character (100, 0);
 
 
 
