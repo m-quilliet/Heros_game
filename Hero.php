@@ -1,4 +1,5 @@
 <?php
+require_once (dirname(__FILE__).'/character.php');
 
 class Hero extends Character{
     //definition attributs de Hero
@@ -53,8 +54,9 @@ class Hero extends Character{
             $this->setRage($this->getRage() + 30);
         }
     }
+    
     public function __toString(){
-        return 'Je suis un nouvel héro , mon arme est un ' .$this->getWeapon(). ' et ma protection est un '.$this->getShield().'.';
+        return '<br> Je suis un nouvel héro , mon arme sont mes ' .$this->getWeapon(). ' et ma protection est un '.$this->getShield().'.';
     }
    // public static function attacked(int $shiedValues,int $health){
         

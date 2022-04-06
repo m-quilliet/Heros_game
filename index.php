@@ -1,10 +1,22 @@
 <?php
-require_once (dirname(__FILE__).'/character.php');
+
 require_once (dirname(__FILE__).'/Hero.php');
 require_once (dirname(__FILE__).'/Orc.php');
 
-$brutus = new Hero(2000, 0, 'couteau', 250, 'bouclier', 600);// creer notre hero
-echo $brutus;
+$sylas = new Hero(2000, 0, 'griffes', 250, 'bouclier', 600);// creer notre hero
 
-$Orc = new Orc(500, 0, 150);// creer notre hero Orc
-echo $Orc;
+$orcy = new Orc(500, 0, 150);// creer notre hero Orc
+
+
+    while ($sylas->getHealth() > 0 && $orcy->getHealth()> 0){
+        $orcy->attack();
+        $orcAttack= $orcy->getDamage();
+        $sylas -> attacked($orcAttack);
+
+        echo $sylas;
+        echo $orcy;
+} 
+
+
+
+

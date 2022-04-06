@@ -1,4 +1,5 @@
 <?php
+require_once (dirname(__FILE__).'/character.php');
 
 class Orc extends Character{
     //definition attributs de Hero
@@ -17,9 +18,10 @@ class Orc extends Character{
     parent::__construct($health,$rage);
     }       
     public function __toString(){
-    return '<br/>Je suis un nouvel Orc , son niveau de santé est de : ' .$this->getHealth(). ' et sa rage est  '.$this->getRage();
+    return '<br/>Je suis un nouvel Orc , mon niveau de santé est de : ' .$this->getHealth(). ' et ma rage est  '.$this->getRage();
     }
-    public function attack(){
-        return $this-> damage= rand( 600,800);
+    public function attack():void{
+        $this->setDamage (random_int( 600,800));
     }
 }
+
