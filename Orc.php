@@ -18,10 +18,16 @@ class Orc extends Character{
     parent::__construct($health,$rage);
     }       
     public function __toString(){
-    return '<br/>Je suis un nouvel Orc , mon niveau de santé est de : ' .$this->getHealth(). ' et ma rage est  '.$this->getRage();
+    return '<br/>Je suis un nouvel Orc , mon niveau de santé est de : ' .$this->getHealth(). ' et ma rage est  de '.$this->getRage();
     }
     public function attack():void{
         $this->setDamage (random_int( 600,800));
+    }
+    public function attacked(int $damageValue, int $rageValue){
+        if($rageValue >= 100){
+            $this->setHealth($this->getHealth()- $damageValue);
+            $this->setRage($this->getRage() +30);
+        }
     }
 }
 

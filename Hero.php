@@ -56,9 +56,11 @@ class Hero extends Character{
     }
     
     public function __toString(){
-        return '<br> Je suis un nouvel héro , mon arme sont mes ' .$this->getWeapon(). ' et ma protection est un '.$this->getShield().'.';
+        return '<br>Le Héro utilise l\'arme '.$this->getWeapon().' qui fait '.$this->getWeaponDamage().' de dégâts et, il
+        a comme armure un '.$this->getShield().' qui encaisse '.$this->getShieldValue().' de dégâts. 
+        <br>Sa santé est de '.$this->getHealth().' et sa rage est de '.$this->getRage().'.<br>';
+
     }
-   // public static function attacked(int $shiedValues,int $health){
         
 }
 
